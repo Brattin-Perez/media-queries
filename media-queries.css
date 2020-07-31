@@ -1,0 +1,9 @@
+p, h1, h2, a  {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*Mobile*/
+@media screen and (max-width: 480px) {
+    html, body {
+        max-width: 100%;
+    }
+    }
