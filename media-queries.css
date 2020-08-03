@@ -6,7 +6,6 @@ html {
     box-sizing: inherit;
 }
 body {
-    max-width: 100%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 0;
     margin: 1em;
@@ -14,14 +13,15 @@ body {
 .nav-links {
     padding: 0;
     list-style: none;
-    text-align: center;
     display: flex;
     flex-direction: column;
-   
 }
 .nav-links a, .alert-info a{
     display: inline-block;
-     padding: .5em;  
+    padding: .5em;  
+}
+.header-img img {
+    width: 100%;
 }
 .sub-section p {
     font-style: italic;
@@ -33,73 +33,65 @@ footer {
 footer p {
     flex-grow: 1;
 }
+#social-media-links {
+    margin-left: auto;
+}
+#social-media-links a {
+    padding: .5em;
+}
 /*Mobile*/
-@media screen and (max-width: 480px) {
-   
+@media screen and (max-width: 576px) {
+    .alert-info  {
+        text-align: center;
+        border: 1px solid #ccc;
+        background: #ccfeff;
+    }
     h1 {
         text-align: center;
     }
    .nav-links li {
        background: #ccc;
        margin: .5em 0;
-
+       text-align: center;
    }
- 
-   .alert-info  {
-        text-align: center;
-        border: 1px solid black;
-       background: #ccfeff;
-   }
-
-   .header-img img {
-    height: 224px;
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 
 }
 
-@media screen and (min-width: 481px){
+@media screen and (min-width: 577px){
     .hidden-on-desktop {
         display: none;
+    }
+    h1 {
+        font-size: 2.8em;
+        margin: 0;
+        padding: .5em 0;
+        position: absolute;
+        top: 0;
     }
 
     .nav-links {
         flex-direction: row;
         justify-content: center;
-
     }
     .nav-links a {
         padding: 1.5em;
     }
-
     .nav-links li:nth-of-type(1) {
         margin-left: auto;
     }
-
-    h1 {
-        font-size: 45px;
-        margin: 0;
-        padding: .5em;
-        position: absolute;
-        top: 0;
-    }
-   
-    .header-img img {
-        width: 100%;
-    }
-
-    div {
-        display: flex;
-        justify-content: space-between;
+    .main, .sub-section {
+        float: left;
+        margin-bottom: 8em;
     }
     .main {
-        float: left;
-        width: 50%;
-        padding-right: 1em;
+        width: 60%;
+    }
+    .sub-section {
+        width: 40%;
+        padding-left: 4em; 
+    }
+    footer {
+        clear: left;
     }
    
 }
